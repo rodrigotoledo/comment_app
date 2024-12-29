@@ -5,23 +5,33 @@
 In directory
 
 ```bash
-$ bundle install
+docker compose up
 ```
-```bash
-$ rake db:create
-```
-```bash
-$ rake db:migrate
-```
-```bash
-$ shotgun config.ru
-# Running on PORT => 9393
-```
-OR
 
 ```bash
-$ puma -C config/puma.rb
-# Running on PORT => 3000
+bundle install
+```
+
+```bash
+rake db:create
+```
+
+```bash
+rake db:migrate
+```
+
+### Running on PORT => 9393
+
+```bash
+shotgun config.ru
+```
+
+OR
+
+### Running on PORT => 3000
+
+```bash
+puma -C config/puma.rb
 ```
 
 Enjoy ☕️

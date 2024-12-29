@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-raise 'Wrong Ruby version, please use a version >= 2.7' unless RUBY_VERSION >= '2.7.3'
+raise 'Wrong Ruby version, please use a version >= 2.7' unless RUBY_VERSION >= '3.3.4'
 
 ENV['SINATRA_ENV'] ||= 'development'
 

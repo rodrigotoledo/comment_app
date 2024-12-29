@@ -4,9 +4,9 @@ source 'http://rubygems.org'
 # Sinatra is a DSL for quickly creating web applications in Ruby with minimal
 # effort.
 
-ruby '2.7.3'
+ruby '3.3.4'
 
-gem 'sinatra', '~> 2.1'
+gem 'sinatra', '>= 4.1.0'
 # This Sinatra plugin supports the full CORS spec including automatic support for CORS preflight (OPTIONS) requests. It uses CORS security best practices. The plugin logs to the default logger to guide you in setting things up properly. It will tell you why a CORS request failed and tell you how to fix it.
 gem 'sinatra-cors', '~> 1.2'
 # A wonderfully simple way to load your code
@@ -20,17 +20,20 @@ gem 'rake', '~> 13.0', '>= 13.0.6'
 # production environments. It's great for highly concurrent Ruby
 # implementations such as Rubinius and JRuby as well as as providing process
 # worker support to support CRuby well.
-gem 'puma', '~> 5.5', '>= 5.5.2'
+gem 'puma', '6.5.0'
 # A plain-Ruby implementation of GraphQL.
-gem 'graphql', '~> 1.12', '>= 1.12.19'
+gem 'graphql', '2.4.8'
 # The Database Toolkit for Ruby
 gem 'sequel', '~> 5.50'
 # Container-agnostic automatic constructor injection
 gem 'dry-auto_inject', '~> 0.8.0'
 
+
 group :development, :test do
+  gem 'pry', '0.14.2'
+  gem 'bundle-audit'
   # Meta package that requires several pry extensions.
-  gem 'foreman', '0.87.1'
+  gem 'foreman', '0.88.1'
   # Process manager for applications with multiple components
   gem 'pry-meta'
   # BDD for Ruby
@@ -38,5 +41,5 @@ group :development, :test do
   # Reloading Rack development server
   gem 'shotgun'
   # Loads environment variables from `.env`.
-  gem 'dotenv', '~> 2.7', '>= 2.7.6'
+  gem 'dotenv', '3.1.7'
 end
